@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target practice</title>
+    <link rel="stylesheet" href="./libs/bootstrap-4.5.2-dist/css/bootstrap.min.css">
+    <script src="./js/canvas.js"></script>
+    <style>
+        #canv {
+            border: solid 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav></nav>
+    <div>
+        <canvas width="800" height="600" id="canv" onmousedown="handleCanvasMouseClick(event)"></canvas>
+        <div>
+            <button onclick="intervalStart()">start</button>
+            <button onclick="intervalStop()">stop</button>
+        </div>
+        <h3 id="cc">0</h3>
+        <div>
+            <h4>Choose color:</h4>
+            <input type="color" id="colorDialog" onchange="handleColorChange(event)" />
+        </div>
+        <div>
+            <h4>Choose speed:</h4>
+            <select id="cspeed" onchange="handleSpeedChange(event)">
+                <option value="">Choose</option>
+                <option value="1000">BABY</option>
+                <option value="600">SLOWLY BUT SURLY</option>
+                <option value="400">NORMAL</option>
+                <option value="200">A LITTLE BIT MORE NORMAL</option>
+                <option value="100">NOW WE ARE TALKING</option>
+                <option value="50">GOD LIKE</option>
+                <option value="10">CHEATER</option>
+                <option value="1">DUDE</option>
+            </select>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
